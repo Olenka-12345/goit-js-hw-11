@@ -11,7 +11,6 @@ import {
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-// 🔎 Стартовий запит — просто показує картинки "sunset" при завантаженні
 const defaultQuery = 'sunset';
 
 getImagesByQuery(defaultQuery)
@@ -27,7 +26,7 @@ getImagesByQuery(defaultQuery)
     console.error(error);
   });
 
-// 🔍 Пошук за введеним запитом
+
 const form = document.querySelector('.form');
 const input = form.elements['search-text'];
 
