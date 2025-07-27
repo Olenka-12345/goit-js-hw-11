@@ -18,6 +18,11 @@ export function createGallery(images) {
       </div>
     </li>
   `).join('');
+  export function clearGallery() {
+  if (!galleryContainer) return;
+  galleryContainer.innerHTML = '';
+}
+
 
   if (!galleryContainer) return;
 galleryContainer.insertAdjacentHTML('beforeend', markup);
