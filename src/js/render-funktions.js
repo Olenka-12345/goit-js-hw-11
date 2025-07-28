@@ -5,6 +5,8 @@ const galleryContainer = document.querySelector('.gallery');
 const lightbox = new SimpleLightbox('.gallery a');
 
 export function createGallery(images) {
+  if (!galleryContainer) return;
+
   const markup = images.map(image => `
     <li class="gallery-item">
       <a href="${image.largeImageURL}">
@@ -18,15 +20,12 @@ export function createGallery(images) {
       </div>
     </li>
   `).join('');
+
+  galleryContainer.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
 
-export function clearGallery()
-{
+export function clearGallery() {
   if (!galleryContainer) return;
   galleryContainer.innerHTML = '';
-}
-  
- {if (!galleryContainer) return;
-galleryContainer.insertAdjacentHTML('beforeend', markup);
-
 }
